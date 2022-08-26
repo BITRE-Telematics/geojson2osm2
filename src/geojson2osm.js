@@ -44,6 +44,7 @@ geojson2osm.geojson2osm = function(geojson) {
     var coord = roundCoords([geo.coordinates]);
     nodes += '<node lat="' + coord[0][1] + '" lon="' + coord[0][0] + '" ' + propertiesEdit(properties) + '>';
     nodes += propertiesToTags(properties);
+    nodes += 'version="69" timestamp="1970-01-01T00:00:00Z'
     nodes += '</node>';
     count--;
     return {
@@ -75,7 +76,7 @@ geojson2osm.geojson2osm = function(geojson) {
       attributes += ' id="' + count + '" ';
     }
     if (!hasChangeset) {
-      attributes += ' changeset="false" ';
+      attributes += ' changeset="69" ';
     }
     return attributes;
   }
@@ -93,6 +94,7 @@ geojson2osm.geojson2osm = function(geojson) {
     nodes += coords.nodes;
     ways += coords.nds;
     ways += propertiesToTags(properties);
+    ways += 'version="69" timestamp="1970-01-01T00:00:00Z'
     ways += '</way>';
     return {
       nodes: nodes,
@@ -113,6 +115,7 @@ geojson2osm.geojson2osm = function(geojson) {
     nodes += coords.nodes;
     ways += coords.nds;
     ways += propertiesToTags(properties);
+    ways += 'version="69" timestamp="1970-01-01T00:00:00Z'
     ways += '</way>';
     return {
       nodes: nodes,
@@ -133,6 +136,7 @@ geojson2osm.geojson2osm = function(geojson) {
     nodes += coords.nodes;
     ways += coords.nds;
     ways += propertiesToTags(properties);
+    ways += 'version="69" timestamp="1970-01-01T00:00:00Z'
     ways += '</way>';
     return {
       nodes: nodes,
@@ -179,7 +183,7 @@ geojson2osm.geojson2osm = function(geojson) {
           repeatLastND = count;
         }
         nds += '<nd ref="' + count + '"/>';
-        nodes += '<node id="' + count + '" lat="' + coords[a][0] + '" lon="' + coords[a][1] + '" changeset="' + changeset + '"/>';
+        nodes += '<node id="' + count + '" lat="' + coords[a][0] + '" lon="' + coords[a][1] + '" changeset="' + "69" + '"/>';
 
         if (repeatLastND && a === length - 1) {
           nds += '<nd ref="' + repeatLastND + '"/>';
@@ -221,7 +225,7 @@ geojson2osm.geojson2osm = function(geojson) {
           temp.relations += obj[n].relations;
         }
       }
-      temp.osm = '<?xml version="1.0" encoding="UTF-8"?><osm version="0.6" generator="https://github.com/Rub21/geojson2osm">';
+      temp.osm = '<?xml version="1.0" encoding="UTF-8"?><osm version="0.6" generator="https://github.com/GeoWonk/geojson2osm">';
       temp.osm += temp.nodes + temp.ways + temp.relations;
       temp.osm += '</osm>';
       osm_file = temp.osm;

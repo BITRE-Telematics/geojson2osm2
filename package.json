@@ -1,9 +1,9 @@
 {
-  "name": "geojson2osm",
+  "name": "geojson2osm2",
   "version": "0.0.7",
   "main": "./index",
   "bin": {
-    "geojson2osm": "cli.js"
+    "geojson2osm2": "cli.js"
   },
   "repository": {
     "type": "git"
@@ -21,5 +21,6 @@
   "devDependencies": {
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
-  }
+  },
+  "dependencies": {}
 }
