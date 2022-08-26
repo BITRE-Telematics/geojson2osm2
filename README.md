@@ -2,16 +2,15 @@
 
 ## geojson2osm
 
-Convert gejson files to osm file.
+Convert geojson files to osm file. Alterations to add dummy tags for changelogs, datestamps and version to comply with schema.
 
 ## Usage
 	
-	npm install geojson2osm
-
+	npm install https://github.com/GeoWonk/geojson2osm2
 Example:
 
 ```
-geojson2osm file.geojson > file.osm
+geojson2osm2 file.geojson > file.osm
 
 ```
 
