@@ -85,7 +85,7 @@ geojson2osm.geojson2osm = function(geojson) {
     var nodes = '',
       ways = '';
     var coords = [];
-    ways += '<way visible="true" ' + propertiesEdit(properties) + 'changeset="69" version="1" timestamp="2022-08-25T11:59:30Z" ' +'>';
+    ways += '<way visible="true" ' + propertiesEdit(properties) + 'version="1" timestamp="2022-08-25T11:59:30Z" ' +'>';
     count++;
     for (var i = 0; i <= geo.coordinates.length - 1; i++) {
       coords.push([geo.coordinates[i][1], geo.coordinates[i][0]]);
