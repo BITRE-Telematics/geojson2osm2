@@ -183,7 +183,7 @@ geojson2osm.geojson2osm = function(geojson) {
           repeatLastND = count;
         }
         nds += '<nd ref="' + count + '"/>';
-        nodes += '<node id="' + count + '" lat="' + coords[a][0] + '" lon="' + coords[a][1] + '" changeset="69" version="69" timestamp="1970-01-01T00:00:00Z" />';
+        nodes += '<node id="' + count + '" lat="' + coords[a][0] + '" lon="' + coords[a][1] + '" changeset="69" version="1" timestamp="2022-08-25T11:59:30Z" />';
 
         if (repeatLastND && a === length - 1) {
           nds += '<nd ref="' + repeatLastND + '"/>';
