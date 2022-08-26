@@ -46,7 +46,7 @@ geojson2osm.geojson2osm = function(geojson) {
     nodes += propertiesToTags(properties);
     nodes += 'version="69" timestamp="1970-01-01T00:00:00Z'
     nodes += '</node>';
-    count--;
+    count++;
     return {
       nodes: nodes
     };
@@ -86,7 +86,7 @@ geojson2osm.geojson2osm = function(geojson) {
       ways = '';
     var coords = [];
     ways += '<way visible="true" ' + propertiesEdit(properties) + '>';
-    count--;
+    count++;
     for (var i = 0; i <= geo.coordinates.length - 1; i++) {
       coords.push([geo.coordinates[i][1], geo.coordinates[i][0]]);
     }
@@ -107,7 +107,7 @@ geojson2osm.geojson2osm = function(geojson) {
       ways = '';
     var coords = [];
     ways += '<way visible="true" ' + propertiesEdit(properties) + ' >';
-    count--;
+    count++;
     for (var i = 0; i <= geo.coordinates[0].length - 1; i++) {
       coords.push([geo.coordinates[0][i][1], geo.coordinates[0][i][0]]);
     }
@@ -128,7 +128,7 @@ geojson2osm.geojson2osm = function(geojson) {
       ways = '';
     var coords = [];
     ways += '<way visible="true" ' + propertiesEdit(properties) + ' >';
-    count--;
+    count++;
     for (var i = 0; i <= geo.coordinates[0].length - 1; i++) {
       coords.push([geo.coordinates[0][i][1], geo.coordinates[0][i][0]]);
     }
@@ -189,7 +189,7 @@ geojson2osm.geojson2osm = function(geojson) {
           nds += '<nd ref="' + repeatLastND + '"/>';
         }
       }
-      count--;
+      count++;
     }
     return {
       'nds': nds,
@@ -197,7 +197,7 @@ geojson2osm.geojson2osm = function(geojson) {
     };
   }
   var hash = {};
-  var count = -1;
+  var count = 1;
   var changeset = 'false';
   var osm_file = '';
   if (typeof geojson === 'string') geojson = JSON.parse(geojson);
