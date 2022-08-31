@@ -106,7 +106,7 @@ geojson2osm.geojson2osm = function(geojson) {
     var nodes = '',
       ways = '';
     var coords = [];
-    ways += '<way visible="true" ' + propertiesEdit(properties) + ' >';
+    ways += '<way visible="true" ' + propertiesEdit(properties) + 'version="1" timestamp="2022-08-25T11:59:30Z" ' +'>';
     count++;
     for (var i = 0; i <= geo.coordinates[0].length - 1; i++) {
       coords.push([geo.coordinates[0][i][1], geo.coordinates[0][i][0]]);
@@ -115,7 +115,7 @@ geojson2osm.geojson2osm = function(geojson) {
     nodes += coords.nodes;
     ways += coords.nds;
     ways += propertiesToTags(properties);
-    ways += 'version="69" timestamp="1970-01-01T00:00:00Z'
+    //ways += 'version="69" timestamp="1970-01-01T00:00:00Z'
     ways += '</way>';
     return {
       nodes: nodes,
@@ -127,7 +127,7 @@ geojson2osm.geojson2osm = function(geojson) {
     var nodes = '',
       ways = '';
     var coords = [];
-    ways += '<way visible="true" ' + propertiesEdit(properties) + ' >';
+    ways += '<way visible="true" ' + propertiesEdit(properties) + 'version="1" timestamp="2022-08-25T11:59:30Z" ' +'>';
     count++;
     for (var i = 0; i <= geo.coordinates[0].length - 1; i++) {
       coords.push([geo.coordinates[0][i][1], geo.coordinates[0][i][0]]);
@@ -136,7 +136,7 @@ geojson2osm.geojson2osm = function(geojson) {
     nodes += coords.nodes;
     ways += coords.nds;
     ways += propertiesToTags(properties);
-    ways += 'version="69" timestamp="1970-01-01T00:00:00Z'
+    //ways += 'version="69" timestamp="1970-01-01T00:00:00Z'
     ways += '</way>';
     return {
       nodes: nodes,
